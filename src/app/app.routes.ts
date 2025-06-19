@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
 import { PruebamisaComponent } from './pruebamisa/pruebamisa.component';
+import { BuscarUsuarioComponent } from './buscar-usuario/buscar-usuario.component';
 
 export const routes: Routes = [
-  {
-    path: 'usuarios',
-    loadChildren: () =>
-      import('./usuarios/usuarios.module').then((m) => m.UsuariosModule),
-  },
   {
     path: 'misael',
     component: PruebamisaComponent,
   },
+  {
+    path: 'buscar',
+    component: BuscarUsuarioComponent
+  }
 ];
