@@ -1,0 +1,87 @@
+:root {
+  --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --color-text: #333;
+  --color-bg: #f5f5f5;
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-light: #fafafa;
+  --radius: 0.5rem;
+  --spacing: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Párrafos */
+p {
+  margin: var(--spacing) 0;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+p:hover {
+  background-color: var(--color-light);
+  transform: translateX(4px);
+}
+
+/* Clase .hola */
+.hola {
+  margin: var(--spacing) 0;
+  padding: var(--spacing);
+  background: var(--color-secondary);
+  color: #fff;
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+.hola:hover {
+  opacity: 0.8;
+}
+
+/* Inputs */
+input {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin: var(--spacing) 0;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+input::placeholder {
+  color: #aaa;
+}
+
+/* Divs genéricos (incluye el que oculta con doble clic) */
+div {
+  margin: var(--spacing) 0;
+  padding: var(--spacing);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+div:hover {
+  background-color: var(--color-light);
+}
+
+/* Si usas la directiva de ocultar por doble clic, añade esta clase en tu TS */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

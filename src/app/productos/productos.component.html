@@ -1,0 +1,25 @@
+<h1>📦 Lista de productos</h1>
+
+@if (productos.length > 0) {
+  <ul>
+    @for (p of productos; track p.id) {
+      <li>
+        {{ p.nombre }} -
+        @switch (p.estado) {
+          @case ('activo') {
+            <span style="color: green">Disponible</span>
+          }
+          @case ('inactivo') {
+            <span style="color: red">No disponible</span>
+          }
+          @default {
+            <span>Estado desconocido</span>
+          }
+        }
+      </li>
+    }
+  </ul>
+}
+@else {
+  <p style="color: gray">No hay productos en la lista.</p>
+}
