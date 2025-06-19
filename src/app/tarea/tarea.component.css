@@ -1,0 +1,20 @@
+h2 {
+  color: blue;
+  text-align: center;
+}
+ul {
+  background-color: lightgray;
+  padding: 10px;
+  list-style-type: none;
+}
+input {
+  border: 2px solid green;
+  padding: 5px;
+}
+button {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}

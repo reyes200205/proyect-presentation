@@ -1,1 +1,8 @@
-<p>contador works!</p>
+<h2>Contador</h2>
+<div class="contador-display">
+  <p>Valor: {{ contador }}</p>
+  <p *ngIf="contador === 0">El contador está en cero</p>
+</div>
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button>
+<button (click)="reiniciar()">Reiniciar</button>
