@@ -1,1 +1,6 @@
-<p>tarea works!</p>
+<h2>Lista de Tareas</h2>
+<ul>
+  <li *ngFor="let tarea of tareas">{{ tarea }}</li>
+</ul>
+<input [(ngModel)]="nuevaTarea" placeholder="Escribe una nueva tarea" />
+<button (click)="agregarTarea()">Agregar Tarea</button>
