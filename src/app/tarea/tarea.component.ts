@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Importa CommonModule para *ngFor
-import { FormsModule } from '@angular/forms'; // Importa FormsModule para ngModel
+import { CommonModule } from '@angular/common'; 
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-tarea',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Añade CommonModule y FormsModule
+  imports: [CommonModule, FormsModule], 
   templateUrl: './tarea.component.html',
   styleUrls: ['./tarea.component.css']
 })

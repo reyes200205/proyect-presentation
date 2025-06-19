@@ -1,5 +1,9 @@
 <div class="container">
-  <h2>🔎 Buscar Usuario</h2>
+
+
+  <h2> Buscar Usuario</h2>
+
+  <p>Texto Escrito: {{ nombre }}</p>
 
   <input
     type="text"
@@ -13,11 +17,16 @@
     {{ cargando ? 'Buscando...' : 'Buscar' }}
   </button>
 
-  <p *ngIf="error" class="error">{{ error }}</p>
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
 
-  <ul *ngIf="usuarios.length > 0">
-    <li *ngFor="let usuario of usuarios">
-      {{ usuario.name }} ({{ usuario.email }})
-    </li>
+
+  @if (usuarios.length > 0) {
+  <ul>
+    @for (usuario of usuarios; track usuario.id) {
+      <li>{{ usuario.name }} ({{ usuario.email }}) - {{ usuario.username }}</li>
+    }
   </ul>
+}
 </div>
